@@ -24,7 +24,8 @@ pipeline {
                 pip install --break-system-packages pytest numpy pandas scikit-learn
 
                 echo "Running Test"
-                ./mlip/bin/pytest
+                chmod +x ./mlip/bin/pytest
+
                 '''
             }
         }
