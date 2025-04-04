@@ -16,7 +16,7 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Activate venv and run pytest
-                source venv/bin/activate
+                source mlip/bin/activate
                 pytest
 
                 echo 'pytest finished running'
