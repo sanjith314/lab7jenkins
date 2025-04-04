@@ -25,8 +25,9 @@ pipeline {
                 pip install numpy
                 pip install pandas
                 pip install scikit-learn
-                echo "Running Test"
-                pytest
+                echo Running Test
+                ./mlip/bin/pytest
+
                 '''
             }
         }
