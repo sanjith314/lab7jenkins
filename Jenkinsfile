@@ -15,7 +15,10 @@ pipeline {
             steps {
                 sh '''
 
-                echo "Activating virtual environment"
+                echo "Activating virtual environment and dependencies"
+                pip install --upgrade pip
+                pip install pytest numpy pandas scikit-learn
+                pip install pytest
 
                 echo "Running tests"
                 pytest
