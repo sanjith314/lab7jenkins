@@ -16,11 +16,10 @@ pipeline {
                 sh '''
 
                 echo "Activating virtual environment and dependencies"
-                pip install --upgrade pip
                 pip install pytest numpy pandas scikit-learn
                 pip install pytest
 
-                echo "Running tests"
+                echo "Runn  "
                 pytest
                 '''
             }
