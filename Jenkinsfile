@@ -14,8 +14,9 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-
+                
                 echo "Activating virtual environment and dependencies"
+                . mlip/bin/activate
                 pip install pytest numpy pandas scikit-learn
                 pip install pytest
 
