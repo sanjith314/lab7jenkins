@@ -20,7 +20,7 @@ pipeline {
 
                 echo "Activating virtual environment and dependencies"
                 . mlip/bin/activate
-                
+                python -m pip install --upgrade pip setuptools
                 pip install pytest
                 pip install numpy
                 pip install pandas
