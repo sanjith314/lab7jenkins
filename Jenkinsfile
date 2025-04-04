@@ -16,7 +16,6 @@ pipeline {
                 sh '''
 
                 echo "Activating virtual environment"
-                source mlip/bin/activate
 
                 echo "Running tests"
                 pytest
