@@ -14,19 +14,17 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                
                 echo "Creating virtual environment"
                 python3 -m venv mlip
 
                 echo "Activating virtual environment and dependencies"
                 . mlip/bin/activate
-                python -m pip install --upgrade pip setuptools
-                pip install pytest
-                pip install numpy
-                pip install pandas
-                pip install scikit-learn
+
+                python -m pip install --upgrade pip setuptools --break-system-packages
+                pip install --break-system-packages pytest numpy pandas scikit-learn
+
                 echo "Running Test"
-                pytest
+                ./mlip/bin/pytest
                 '''
             }
         }
