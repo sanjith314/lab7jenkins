@@ -17,10 +17,11 @@ pipeline {
                 
                 echo "Activating virtual environment and dependencies"
                 . mlip/bin/activate
-                pip install pytest numpy pandas scikit-learn
                 pip install pytest
-
-                echo "Runn  "
+                pip install numpy
+                pip install pandas
+                pip install scikit-learn
+                echo "Running Test"
                 pytest
                 '''
             }
