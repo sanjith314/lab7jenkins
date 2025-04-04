@@ -14,13 +14,14 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-
+                
                 echo "Creating virtual environment"
                 python3 -m venv mlip
 
                 echo "Activating virtual environment and dependencies"
                 . mlip/bin/activate
-                apt install python3 pytest
+                python -m pip install --upgrade pip setuptools
+                pip install pytest
                 pip install numpy
                 pip install pandas
                 pip install scikit-learn
