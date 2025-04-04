@@ -15,6 +15,9 @@ pipeline {
             steps {
                 sh '''
                 
+                echo "Creating virtual environment"
+                python3 -m venv mlip
+
                 echo "Activating virtual environment and dependencies"
                 . mlip/bin/activate
                 pip install pytest
